@@ -54,7 +54,7 @@ cscript ospp.vbs /dstatusall
 
 * Donacion:
 
-![Donacion](https://github.com/linux8a/docker_kms-server/.donacion.png)
+![Donacion](https://github.com/linux8a/docker_kms-server/blob/master/.donacion.png)
 
 ## 
 Numbers|Product names
