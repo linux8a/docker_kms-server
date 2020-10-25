@@ -4,6 +4,7 @@ Aporte de Argenis Ochoa Gonzalez (@linux8a)
 
 # kms-server
 kms server. View list software compatible
+https://github.com/linux8a/docker_kms-server
 
 ## Run
 
@@ -53,7 +54,7 @@ cscript ospp.vbs /dstatusall
 
 * Donacion:
 
-![Donacion](../.donacion.png)
+![Donacion](https://github.com/linux8a/docker_kms-server/.donacion.png)
 
 ## 
 Numbers|Product names
