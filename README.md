@@ -6,6 +6,8 @@ Aporte de Argenis Ochoa Gonzalez (@linux8a)
 kms server. View list software compatible
 https://github.com/linux8a/docker_kms-server
 
+![size](./img/image.png)
+
 ## Run
 
 * Run docker-compose
@@ -17,7 +19,7 @@ $ docker-compose up -d
 * Run docker
 
 ```
-$ docker run -it -d -p 1688:1688 kms-server:v1.0
+$ docker run -it -d -p 1688:1688 linux8a/kms-server:v1.0
 ```
 
 ## Client usage:
@@ -54,7 +56,11 @@ cscript ospp.vbs /dstatusall
 
 * Donacion:
 
-![Donacion](https://github.com/linux8a/docker_kms-server/blob/master/.donacion.png)
+![Donacion](https://github.com/linux8a/docker_kms-server/blob/master/.donacion_enzona.png)
+
+o un usd en bitcoin
+
+![Donacion](https://github.com/linux8a/docker_kms-server/blob/master/.donacion_bitcoin.png
 
 ## 
 Numbers|Product names
