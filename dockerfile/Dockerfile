@@ -11,10 +11,7 @@ RUN set -ex && \
                                 build-base && \
     cd vlmcsd && \
     make && \
-    mv vlmcsd /usr/bin && \
-    apk del .build-deps build-base && \
-    rm -rf /tmp/* && \
-    rm -rf /app/*
+    mv vlmcsd /usr/bin
 
 FROM scratch
 LABEL org.opencontainers.image.title="Kms server" \
