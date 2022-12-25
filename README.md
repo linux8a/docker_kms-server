@@ -22,7 +22,7 @@ $ docker-compose up -d
 * Run docker
 
 ```
-$ docker run -it -d -p 1688:1688 linux8a/kms-server:v1.0
+$ docker run -it -d -p 1688:1688 linux8a/kms-server
 ```
 
 ## Client usage:
