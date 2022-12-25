@@ -24,4 +24,5 @@ jobs:
       run: |
          cd dockerfile
          docker build . --file Dockerfile --tag linux8a/kms-server:$(date +%s)
-         docker push linux8a/kms-server:$(date +%s)
+         tag=`docker images | grep kms-server | awk '{printf $1 ":" $2}'`
+         docker push $tag
