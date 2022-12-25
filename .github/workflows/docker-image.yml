@@ -26,3 +26,5 @@ jobs:
          docker build . --file Dockerfile --tag linux8a/kms-server:$(date +%s)
          tag=`docker images | grep kms-server | awk '{printf $1 ":" $2}'`
          docker push $tag
+         docker tag $tag linux8a/kms-server:latest
+         docker push linux8a/kms-server:latest
