@@ -1,5 +1,8 @@
 # Microservice kms-server
 
+[![Docker Image CI](https://github.com/linux8a/docker_kms-server/actions/workflows/docker-image.yml/badge.svg)](https://github.com/linux8a/docker_kms-server/actions/workflows/docker-image.yml)
+
+
 Aporte de Argenis Ochoa Gonzalez (@linux8a)
 
 # kms-server
