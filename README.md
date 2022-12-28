@@ -19,7 +19,7 @@ https://github.com/linux8a/docker_kms-server
 $ docker-compose up -d
 ```
 
-* Run docker
+* Run docker cli
 
 ```
 $ docker run -it -d -p 1688:1688 linux8a/kms-server
