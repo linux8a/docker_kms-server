@@ -1,10 +1,13 @@
 name: Docker Image CI
 
+# on:
+#   push:
+#     branches: [ "master" ]
+#   pull_request:
+#     branches: [ "master" ]
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  schedule:
+    - cron:  '0 4 * * *'
 
 jobs:
 
@@ -20,6 +23,13 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - uses: actions/checkout@v3
+    - name: Check if update available
+        id: check
+        uses: lucacome/docker-image-update-checker@v1
+        with:
+          base-image: alpine:latest
+          image: linux8a/kms-server:latest
+
     - name: Build the Docker image
       run: |
          cd dockerfile
@@ -28,3 +38,4 @@ jobs:
          docker push $tag
          docker tag $tag linux8a/kms-server:latest
          docker push linux8a/kms-server:latest
+      if: steps.check.outputs.needs-updating == 'true'
