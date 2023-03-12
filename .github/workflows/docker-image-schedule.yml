@@ -35,14 +35,5 @@ jobs:
         context: "{{defaultContext}}:dockerfile"
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/kms-server:latest
-      if: steps.check.outputs.needs-updating == 'true'
-
-    - name: Build and push
-      uses: docker/build-push-action@v4
-      with:
-        context: "{{defaultContext}}:dockerfile" 
-        file: ./Dockerfile
-        push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/kms-server:$(date +%s)
+        tags: ${{ secrets.DOCKER_USERNAME }}/kms-server:latest,${{ secrets.DOCKER_USERNAME }}/kms-server:${{ steps.date.outputs.date }}
       if: steps.check.outputs.needs-updating == 'true'
