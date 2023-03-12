@@ -36,5 +36,5 @@ jobs:
         context: "{{defaultContext}}:dockerfile"
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/kms-server:latest,${{ secrets.DOCKER_USERNAME }}/kms-server:${{ steps.date.outputs.date }}
+        tags: ${{ secrets.DOCKER_USERNAME }}/kms-server:latest , ${{ secrets.DOCKER_USERNAME }}/kms-server:${{ steps.date.outputs.date }}
       if: steps.check.outputs.needs-updating == 'true'
