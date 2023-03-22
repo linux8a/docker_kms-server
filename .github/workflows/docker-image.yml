@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Set up emu
+    - name: Set up Qemu
       uses: docker/setup-qemu-action@v2
 
     - name: Set up Docker Buildx
@@ -34,5 +34,5 @@ jobs:
         context: "{{defaultContext}}:dockerfile"
         file: ./Dockerfile
         push: true
-        plataforms: linux/386, linux/amd64, linux/arm64, linux/arm/v6, linux/arm/v7
+        plataforms: linux/386,linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
         tags: ${{ secrets.DOCKER_USERNAME }}/kms-server:latest,${{ secrets.DOCKER_USERNAME }}/kms-server:${{ steps.date.outputs.date }}
