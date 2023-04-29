@@ -20,7 +20,7 @@ jobs:
       id: check
       uses: lucacome/docker-image-update-checker@v1
       with:
-        base-image: alpine:latest
+        base-image: library/alpine:latest
         image: linux8a/kms-server:latest
 
     - name: Login to DockerHub
